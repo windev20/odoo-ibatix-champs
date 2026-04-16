@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Héritage du devis / bon de commande -->
+    <record id="view_sale_order_form_ibatix" model="ir.ui.view">
+        <field name="name">sale.order.form.ibatix</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+            <!-- Champs IBATIX à ajouter -->
+        </field>
+    </record>
+
+</odoo>
