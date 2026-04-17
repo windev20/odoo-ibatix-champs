@@ -7,7 +7,7 @@
         <field name="inherit_id" ref="base.view_partner_form"/>
         <field name="arch" type="xml">
             <notebook position="inside">
-                <page string="IBATIX" invisible="is_company">
+                <page string="Précarité" invisible="is_company">
                     <group>
                         <field name="categorie_precarite"/>
                         <field name="categorie_mpr"/>
