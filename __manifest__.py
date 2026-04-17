@@ -10,6 +10,11 @@
         'views/product_views.xml',
         'views/partner_views.xml',
     ],
+    'assets': {
+        'web.assets_backend': [
+            'ibatix_champs/static/src/css/ibatix_theme.css',
+        ],
+    },
     'installable': True,
     'application': False,
     'license': 'LGPL-3',
