@@ -13,7 +13,7 @@
                 <attribute name="autofocus">0</attribute>
             </page>
             <page name="contact_addresses" position="before">
-                <page string="Informations" invisible="is_company" autofocus="autofocus">
+                <page string="Informations" name="ibatix_informations" invisible="is_company" autofocus="autofocus">
                     <field name="fiscal_ids">
                         <list editable="bottom">
                             <field name="numero_fiscal" string="Numéro Fiscal"/>
