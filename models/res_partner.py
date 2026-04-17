@@ -4,6 +4,8 @@ from odoo import fields, models
 class ResPartner(models.Model):
     _inherit = 'res.partner'
 
+    siret = fields.Char(string='Numéro de Siret')
+
     fiscal_ids = fields.One2many('ibatix.partner.fiscal', 'partner_id', string='Données fiscales')
 
     categorie_precarite = fields.Selection([
