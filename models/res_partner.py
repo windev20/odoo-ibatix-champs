@@ -9,3 +9,10 @@ class ResPartner(models.Model):
         ('modeste', 'Modeste'),
         ('classique', 'Classique'),
     ], string='Catégorie CEE')
+
+    categorie_mpr = fields.Selection([
+        ('bleu', '🔵  Bleu'),
+        ('jaune', '🟡  Jaune'),
+        ('violet', '🟣  Violet'),
+        ('rose', '🩷  Rose'),
+    ], string='Catégorie MPR')
