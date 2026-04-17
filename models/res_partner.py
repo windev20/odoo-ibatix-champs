@@ -1,4 +1,4 @@
-from odoo import fields, models
+from odoo import api, fields, models
 
 
 class ResPartner(models.Model):
@@ -20,3 +20,12 @@ class ResPartner(models.Model):
     ], string='Catégorie MPR')
 
     document_ids = fields.One2many('ibatix.partner.document', 'partner_id', string='Documents')
+
+    @api.model
+    def default_get(self, fields_list):
+        res = super().default_get(fields_list)
+        if 'country_id' in fields_list and not res.get('country_id'):
+            france = self.env.ref('base.fr', raise_if_not_found=False)
+            if france:
+                res['country_id'] = france.id
+        return res
