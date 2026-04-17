@@ -26,7 +26,7 @@
                 <page string="Documents">
                     <field name="document_ids" string="Documents">
                         <list editable="bottom">
-                            <field name="name" string="Nom"/>
+                            <field name="document_type_id" string="Nom"/>
                             <field name="date" string="Date"/>
                             <field name="file" widget="binary" filename="filename" string="Documents"/>
                             <field name="filename" column_invisible="1"/>

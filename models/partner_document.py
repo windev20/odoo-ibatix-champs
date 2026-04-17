@@ -7,7 +7,7 @@ class IbatixPartnerDocument(models.Model):
     _order = 'date desc, id desc'
 
     partner_id = fields.Many2one('res.partner', required=True, ondelete='cascade')
-    name = fields.Char(string='Nom', required=True)
+    document_type_id = fields.Many2one('ibatix.document.type', string='Nom', required=True)
     file = fields.Binary(string='Documents', attachment=True, required=True)
     filename = fields.Char(string='Nom du fichier')
     date = fields.Date(string='Date', default=fields.Date.today)
