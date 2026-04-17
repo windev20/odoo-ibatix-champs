@@ -1,13 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 
-    <!-- Héritage de la fiche client -->
     <record id="view_res_partner_form_ibatix" model="ir.ui.view">
         <field name="name">res.partner.form.ibatix</field>
         <field name="model">res.partner</field>
         <field name="inherit_id" ref="base.view_partner_form"/>
         <field name="arch" type="xml">
-            <!-- Champs IBATIX à ajouter -->
+            <notebook position="inside">
+                <page string="IBATIX" invisible="is_company">
+                    <group>
+                        <field name="categorie_precarite"/>
+                    </group>
+                </page>
+            </notebook>
         </field>
     </record>
 
