@@ -18,3 +18,5 @@ class IbatixPartnerFiscal(models.Model):
         store=True,
     )
     nb_parts_foyer = fields.Integer(string='Nombre de parts dans le foyer')
+    avis_imposition = fields.Binary(string="Avis d'imposition", attachment=True)
+    avis_imposition_filename = fields.Char(string="Nom du fichier avis")
