@@ -9,8 +9,8 @@
             <field name="state_id" position="attributes">
                 <attribute name="invisible">not is_company</attribute>
             </field>
-            <notebook position="inside">
-                <page string="Précarité" invisible="is_company">
+            <page name="contact_addresses" position="before">
+                <page string="Informations" invisible="is_company">
                     <field name="fiscal_ids">
                         <list editable="bottom">
                             <field name="numero_fiscal" string="Numéro Fiscal"/>
@@ -26,6 +26,8 @@
                         <field name="categorie_mpr"/>
                     </group>
                 </page>
+            </page>
+            <notebook position="inside">
                 <page string="Documents">
                     <field name="document_ids" string="Documents">
                         <list editable="bottom">
