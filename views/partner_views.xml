@@ -6,11 +6,7 @@
         <field name="model">res.partner</field>
         <field name="inherit_id" ref="base.view_partner_form"/>
         <field name="arch" type="xml">
-            <div class="oe_title" position="before">
-                <group>
-                    <field name="siret" invisible="not is_company" placeholder="Ex : 12345678900012"/>
-                </group>
-            </div>
+
             <notebook position="inside">
                 <page string="Précarité" invisible="is_company">
                     <field name="fiscal_ids">
