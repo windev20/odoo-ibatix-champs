@@ -10,7 +10,7 @@
                 <attribute name="invisible">not is_company</attribute>
             </field>
             <page name="contact_addresses" position="attributes">
-                <attribute name="autofocus" remove="1"/>
+                <attribute name="autofocus">0</attribute>
             </page>
             <page name="contact_addresses" position="before">
                 <page string="Informations" invisible="is_company" autofocus="autofocus">
