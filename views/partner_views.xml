@@ -9,6 +9,15 @@
             <field name="state_id" position="attributes">
                 <attribute name="invisible">not is_company</attribute>
             </field>
+            <field name="parent_id" position="attributes">
+                <attribute name="invisible">not is_company</attribute>
+            </field>
+            <field name="vat" position="attributes">
+                <attribute name="invisible">not is_company</attribute>
+            </field>
+            <field name="company_registry" position="attributes">
+                <attribute name="invisible">not is_company</attribute>
+            </field>
             <page name="contact_addresses" position="attributes">
                 <attribute name="autofocus">0</attribute>
             </page>
