@@ -15,6 +15,12 @@
             <field name="vat" position="attributes">
                 <attribute name="invisible">not is_company</attribute>
             </field>
+            <label for="vat" position="attributes">
+                <attribute name="invisible">not is_company</attribute>
+            </label>
+            <div name="vat_vies_container" position="attributes">
+                <attribute name="invisible">not is_company</attribute>
+            </div>
             <field name="company_registry" position="attributes">
                 <attribute name="invisible">not is_company</attribute>
             </field>
