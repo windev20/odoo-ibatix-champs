@@ -16,3 +16,5 @@ class ResPartner(models.Model):
         ('violet', '🟣  Violet'),
         ('rose', '🩷  Rose'),
     ], string='Catégorie MPR')
+
+    document_ids = fields.One2many('ibatix.partner.document', 'partner_id', string='Documents')
