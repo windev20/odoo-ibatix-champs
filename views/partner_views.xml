@@ -8,11 +8,14 @@
         <field name="arch" type="xml">
             <notebook position="inside">
                 <page string="Précarité" invisible="is_company">
-                    <group col="6">
-                        <field name="revenu_fiscal"/>
-                        <field name="nb_parts_foyer"/>
-                        <field name="annee_fiscale"/>
-                    </group>
+                    <field name="fiscal_ids">
+                        <list editable="bottom">
+                            <field name="annee_fiscale" string="Année fiscale"/>
+                            <field name="revenu_fiscal" string="Revenu fiscal de référence"/>
+                            <field name="currency_id" column_invisible="1"/>
+                            <field name="nb_parts_foyer" string="Nombre de parts dans le foyer"/>
+                        </list>
+                    </field>
                     <group>
                         <field name="categorie_precarite"/>
                         <field name="categorie_mpr"/>
