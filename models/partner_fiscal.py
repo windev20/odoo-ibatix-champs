@@ -7,6 +7,8 @@ class IbatixPartnerFiscal(models.Model):
     _order = 'annee_fiscale desc'
 
     partner_id = fields.Many2one('res.partner', required=True, ondelete='cascade')
+    numero_fiscal = fields.Char(string='Numéro Fiscal')
+    reference_fiscal = fields.Char(string='Référence Fiscal')
     annee_fiscale = fields.Integer(string='Année fiscale')
     revenu_fiscal = fields.Monetary(string='Revenu fiscal de référence', currency_field='currency_id')
     currency_id = fields.Many2one(

@@ -10,6 +10,8 @@
                 <page string="Précarité" invisible="is_company">
                     <field name="fiscal_ids">
                         <list editable="bottom">
+                            <field name="numero_fiscal" string="Numéro Fiscal"/>
+                            <field name="reference_fiscal" string="Référence Fiscal"/>
                             <field name="annee_fiscale" string="Année fiscale"/>
                             <field name="revenu_fiscal" string="Revenu fiscal de référence"/>
                             <field name="currency_id" column_invisible="1"/>
