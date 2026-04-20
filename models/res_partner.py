@@ -6,6 +6,11 @@ class ResPartner(models.Model):
 
     fiscal_ids = fields.One2many('ibatix.partner.fiscal', 'partner_id', string='Données fiscales')
 
+    civilite = fields.Selection([
+        ('monsieur', 'Monsieur'),
+        ('madame', 'Madame'),
+    ], string='Civilité')
+
     categorie_precarite = fields.Selection([
         ('precaire', 'Précaire'),
         ('modeste', 'Modeste'),

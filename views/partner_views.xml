@@ -6,6 +6,15 @@
         <field name="model">res.partner</field>
         <field name="inherit_id" ref="base.view_partner_form"/>
         <field name="arch" type="xml">
+
+            <!-- Civilité juste avant le nom, uniquement pour les particuliers -->
+            <xpath expr="//h1[contains(@class,'mb-0')]" position="before">
+                <field name="civilite"
+                       widget="radio"
+                       options="{'horizontal': true}"
+                       invisible="is_company"/>
+            </xpath>
+
             <field name="state_id" position="attributes">
                 <attribute name="invisible">not is_company</attribute>
             </field>
