@@ -8,14 +8,30 @@
         <field name="inherit_id" ref="sale.view_order_form"/>
         <field name="arch" type="xml">
 
-            <!-- Étiquettes colorées au-dessus du client -->
+            <!-- Champ technique exposé pour les invisible -->
             <xpath expr="//group[@name='partner_details']/field[@name='partner_id']" position="before">
+                <field name="partner_is_company" invisible="1"/>
                 <field name="partner_badges_html"
                        widget="html"
                        readonly="1"
                        nolabel="1"
                        colspan="2"
                        invisible="not partner_id"/>
+            </xpath>
+
+            <!-- Masquer l'adresse de facturation pour les particuliers -->
+            <xpath expr="//group[@name='partner_details']/field[@name='partner_invoice_id']" position="attributes">
+                <attribute name="invisible">not partner_is_company</attribute>
+            </xpath>
+
+            <!-- Adresse complète d'installation sous le champ livraison -->
+            <xpath expr="//group[@name='partner_details']/field[@name='partner_shipping_id']" position="after">
+                <field name="partner_shipping_address_display"
+                       readonly="1"
+                       nolabel="1"
+                       colspan="2"
+                       invisible="not partner_shipping_id"
+                       class="text-muted fst-italic small ps-1"/>
             </xpath>
 
         </field>

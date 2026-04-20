@@ -4,6 +4,38 @@ from odoo import api, fields, models
 class SaleOrder(models.Model):
     _inherit = 'sale.order'
 
+    partner_is_company = fields.Boolean(related='partner_id.is_company', store=False)
+
+    partner_shipping_address_display = fields.Text(
+        compute='_compute_shipping_address_display',
+        store=False,
+    )
+
+    @api.depends(
+        'partner_shipping_id.street',
+        'partner_shipping_id.street2',
+        'partner_shipping_id.zip',
+        'partner_shipping_id.city',
+        'partner_shipping_id.country_id',
+    )
+    def _compute_shipping_address_display(self):
+        for order in self:
+            p = order.partner_shipping_id
+            if not p:
+                order.partner_shipping_address_display = False
+                continue
+            lines = []
+            if p.street:
+                lines.append(p.street)
+            if p.street2:
+                lines.append(p.street2)
+            zip_city = ' '.join(filter(None, [p.zip, p.city]))
+            if zip_city:
+                lines.append(zip_city)
+            if p.country_id and p.country_id.code != 'FR':
+                lines.append(p.country_id.name)
+            order.partner_shipping_address_display = '\n'.join(lines) if lines else False
+
     partner_badges_html = fields.Html(
         compute='_compute_partner_badges_html',
         store=False,
