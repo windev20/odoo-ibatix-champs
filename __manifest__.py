@@ -9,10 +9,14 @@
         'security/ir.model.access.csv',
         'views/product_views.xml',
         'views/partner_views.xml',
+        'views/sale_order_views.xml',
     ],
     'assets': {
         'web.assets_backend': [
             'ibatix_champs/static/src/css/ibatix_theme.css',
+        ],
+        'web.report_assets_common': [
+            'ibatix_champs/static/src/css/ibatix_report.css',
         ],
     },
     'installable': True,

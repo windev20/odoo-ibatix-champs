@@ -1,0 +1,35 @@
+/* ============================================================
+   IBATIX — Styles PDF / Rapports
+   ============================================================ */
+
+/* Colonne TVA : forcer no-wrap et largeur minimale */
+.o_main_table td[name="td_product_taxes"],
+.o_main_table th[name="th_taxes"] {
+    white-space: nowrap !important;
+    width: 80px;
+    min-width: 80px;
+}
+
+/* Colonne Montant */
+.o_main_table td[name="td_product_subtotal"],
+.o_main_table th[name="th_subtotal"] {
+    white-space: nowrap !important;
+    width: 90px;
+    min-width: 90px;
+}
+
+/* Colonne Prix unitaire */
+.o_main_table td[name="td_product_priceunit"],
+.o_main_table th[name="th_priceunit"] {
+    white-space: nowrap !important;
+    width: 80px;
+    min-width: 80px;
+}
+
+/* Colonne Quantité */
+.o_main_table td[name="td_product_quantity"],
+.o_main_table th[name="th_quantity"] {
+    white-space: nowrap !important;
+    width: 80px;
+    min-width: 80px;
+}
