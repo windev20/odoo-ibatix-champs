@@ -88,3 +88,13 @@ a:hover {
     color: #1B5E20;
     font-weight: 500;
 }
+
+/* --- Flèche externe produit toujours visible dans les lignes de devis --- */
+.o_form_view .o_field_one2many .o_data_row .o_field_many2one_selection .o_external_button {
+    visibility: visible !important;
+    opacity: 0.5;
+}
+.o_form_view .o_field_one2many .o_data_row .o_field_many2one_selection:hover .o_external_button,
+.o_form_view .o_field_one2many .o_data_row .o_field_many2one_selection:focus-within .o_external_button {
+    opacity: 1;
+}
